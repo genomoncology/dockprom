@@ -11,6 +11,7 @@ A monitoring solution for Docker hosts and containers with [Prometheus](https://
 Clone this repository on your Docker host, cd into dockprom directory and run compose up:
 
 ```bash
+yum install git (for most Genom servers)
 git clone https://github.com/stefanprodan/dockprom
 cd dockprom
 
