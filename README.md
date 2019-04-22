@@ -14,19 +14,12 @@ Clone this repository on your Docker host, cd into dockprom directory and run co
 yum install git (for most Genom servers)
 git clone https://github.com/stefanprodan/dockprom
 cd dockprom
-
-ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
-
-docker network connect knowledge_default caddy
 ```
 
-Then to access grafana, run the following command on the server. Copy the output and paste it into a new (local machine) bash session. Then navigate to localhost:3000 (This process is identical to accessing solr on a server)
-```
-export CADDY_IP=$(docker inspect knowledge_default > network.txt && grep -A3 "caddy" network.txt | tail -n 1 | cut -d'"' -f 4 | cut -d'/' -f 1) && echo "ssh -L 3000:${CADDY_IP}:3000 -N ${HOSTNAME}.genomoncology.io" && rm -f network.txt
-
+Then to spin up and access grafana, run the following command on the server. Copy the output and paste it into a new (local machine) bash session. Then navigate to localhost:3000 (This process is identical to accessing solr on a server)
+`./run_and_connect.sh`
 Output should resemble this...
 ssh -L 3000:172.20.0.15:3000 -N baylor-test.genomoncology.io
-```
 
 Prerequisites:
 
