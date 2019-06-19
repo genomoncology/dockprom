@@ -12,7 +12,7 @@ Clone this repository on your Docker host, cd into dockprom directory and run co
 
 ```bash
 yum install git (for most Genom servers)
-git clone https://github.com/stefanprodan/dockprom
+git clone https://github.com/genomoncology/dockprom
 cd dockprom
 ```
 
