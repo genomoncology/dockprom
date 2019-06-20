@@ -38,7 +38,8 @@ scrape_configs:
     scrape_interval: 15s
     honor_labels: true
     static_configs:
-      - targets: ['interface:8000/prometheus']
+      - targets: ['interface:8000']
+    metrics_path: '/prometheus/metrics'
 
 alerting:
   alertmanagers:
